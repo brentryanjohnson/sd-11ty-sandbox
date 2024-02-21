@@ -2,9 +2,9 @@
 #
 # Configuration options for the overall settings for the website.
 
-title: Workplace
+title: Cool sh!t engineers get to do
 logo: /assets/img/gsa_logo.svg
-description: Workplace is GSA’s effort to lead and support federal agencies through the return to office and the future of work.
+description: Engineering stuff for designer people
 
 # COMPONENTS
 #
@@ -22,28 +22,16 @@ header:
 
 identifier:
   enabled: true
-  domain: gsa.gov/workplace
+  domain: 
   parentAgency:
     text: U.S. General Services Administration
-    href: https://www.gsa.gov/
+    href: #
   logo:
     src: /assets/img/gsa_logo.svg
     alt: GSA
   links:
-    - text: About GSA
+    - text: sandbox
       href: https://www.gsa.gov/about-us
-    - text: Accessibility support
-      href: https://www.gsa.gov/website-information/accessibility-aids
-    - text: FOIA requests
-      href: https://www.gsa.gov/reference/freedom-of-information-act-foia
-    - text: No FEAR Act data
-      href: https://www.gsa.gov/reference/civil-rights-programs/notification-and-federal-employee-antidiscrimination-and-retaliation-act-of-2002
-    - text: Office of the Inspector General
-      href: https://www.gsaig.gov/
-    - text: Performance reports
-      href: https://www.gsa.gov/reference/reports/budget-performance
-    - text: Privacy policy
-      href: https://www.gsa.gov/website-information/website-policies#privacy
 
 footer:
   enabled: true
