@@ -6,6 +6,7 @@ const yaml = require("js-yaml");
 const customShortcodes = require("./modules/shortcodes");
 const customFilters = require("./modules/filters");
 const markdownIt = require("./modules/markdown");
+const {parse} = require('csv-parse/sync');
 
 module.exports = function(eleventyConfig) {
   const pathPrefix = process.env.BASEURL || "/";
@@ -26,6 +27,15 @@ module.exports = function(eleventyConfig) {
   // Read YAML files in the _data directory
   eleventyConfig.addDataExtension("yml", contents => yaml.load(contents));
   eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
+
+  // Read csv files in the _data directory
+  eleventyConfig.addDataExtension("csv", (contents) => {
+    const records = parse(contents, {
+      columns: true,
+      skip_empty_lines: true,
+    });
+    return records;
+    });
 
   // Watch for changes in additional directories
   eleventyConfig.addWatchTarget("_data");
